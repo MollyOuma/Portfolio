@@ -1,5 +1,12 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+html {
+  scroll-behavior: smooth;
+}
+
 body {
-  margin: 0;
+  /* margin: 0; */
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
     'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
     sans-serif;
@@ -10,4 +17,61 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+#introduction {
+  position: relative;
+  padding-top: 8rem;
+  padding-bottom: 8rem;
+  background-color: #ffffff;
+  color: #000000;
+  text-align: center;
+  overflow: hidden;
+}
+
+#introduction .container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+}
+
+#introduction h1,
+#introduction h2,
+#introduction h3 {
+  margin-bottom: 1rem;
+}
+
+#introduction p {
+  margin-top: 1rem;
+  margin-bottom: 3rem;
+}
+
+#introduction button {
+  margin-top: 2rem;
+  margin-right: 1rem;
+  padding: 0.75rem 1.5rem;
+  border-radius: 9999px;
+  font-weight: bold;
+  transition: background-color 0.3s;
+}
+
+#introduction img {
+  left: 88px;
+  width: 29rem;
+  height: 30rem;
+  /* object-fit: cover; */
+  z-index: 10;
+  position: relative;
+}
+
+.quarter-circle {
+  position: absolute;
+  top: 20px;
+  left: 90px;
+  width: 500px;
+  height: 460px;
+  background-color: #4567F0;
+  border-top-left-radius: 400px;
+  z-index: 0;
 }
