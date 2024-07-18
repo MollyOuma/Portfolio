@@ -1,103 +1,70 @@
-import React from 'react';
-import { Carousel } from 'react-responsive-carousel';
-import 'react-responsive-carousel/lib/styles/carousel.min.css';
+import React, { useState } from 'react';
 
 const Testimonials = () => {
+  const [email, setEmail] = useState('');
+  const [message, setMessage] = useState('');
+
+  const handleSubmit = async (event) => {
+    event.preventDefault();
+
+    const response = await fetch('http://localhost:3001/send-email', {
+      method: 'POST',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({ email }),
+    });
+
+    if (response.ok) {
+      setMessage('Email sent successfully!');
+      setEmail(''); // Clear the input field
+    } else {
+      setMessage('Failed to send email.');
+    }
+  };
+
   return (
-    <section id="testimonials" className="py-32 bg-white ">
-      <div className="container mx-auto text-center">
-        <h2 className="text-4xl font-bold text-gray-900">Awesome Testimonials</h2>
-        <p className="text-gray-600 mt-4">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
-        <div className="mt-12">
-          <Carousel
-            showArrows={true}
-            infiniteLoop={true}
-            showThumbs={false}
-            showStatus={false}
-            autoPlay={true}
-            interval={5000}
-          >
-            {/* Testimonial 1 */}
-            <div className="flex mx-20 flex justify-around">
-              <div className="w-1/3 px-2">
-                <div className="rounded p-6">
-                  <img className="w-2 h-12 rounded-full mb-4 mx-auto" src="../ux.png" alt="User 1" />
-                  <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam laoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.</p>
-                  <div className="flex flex-col items-center mt-4">
-                    <div className="text-center">
-                      <h3 className="font-semibold text-gray-900">Musharof Chy</h3>
-                      <p className="text-gray-600">Founder @ LineIcons</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-1/3 px-2">
-                <div className="rounded p-6">
-                  <img className="w-2 h-12 rounded-full mb-4 mx-auto" src="../ux.png" alt="User 1" />
-                  <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam laoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.</p>
-                  <div className="flex flex-col items-center mt-4">
-                    <div className="text-center">
-                      <h3 className="font-semibold text-gray-900">Musharof Chy</h3>
-                      <p className="text-gray-600">Founder @ LineIcons</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-1/3 px-2">
-                <div className="rounded p-6">
-                  <img className="w-12 h-12 rounded-full mb-4 mx-auto" src="../ux.png" alt="User 2" />
-                  <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam laoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.</p>
-                  <div className="flex flex-col items-center mt-4">
-                    <div className="text-center">
-                      <h3 className="font-semibold text-gray-900">Devid Sailio</h3>
-                      <p className="text-gray-600">Founder @ TailGrids</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            {/* Add more testimonials as needed */}
-            <div className="flex mx-20 flex justify-around">
-              <div className="w-1/3 px-2">
-                <div className="rounded p-6">
-                  <img className="w-12 h-12 rounded-full mb-4 mx-auto" src="../ux.png" alt="User 1" />
-                  <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam laoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.</p>
-                  <div className="flex flex-col items-center mt-4">
-                    <div className="text-center">
-                      <h3 className="font-semibold text-gray-900">Musharof Chy</h3>
-                      <p className="text-gray-600 mb-8">Founder @ LineIcons</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-1/3 px-2">
-                <div className=" rounded p-6">
-                  <img className="w-2 h-12 rounded-full mb-4 mx-auto" src="../ux.png" alt="User 1" />
-                  <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam laoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.</p>
-                  <div className="flex flex-col items-center mt-4">
-                    <div className="text-center">
-                      <h3 className="font-semibold text-gray-900">Musharof Chy</h3>
-                      <p className="text-gray-600">Founder @ LineIcons</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div className="w-1/3 px-2">
-                <div className="rounded p-6 ">
-                  <img className="w-12 h-12 rounded-full mb-4 mx-auto" src="../ux.png" alt="User 2" />
-                  <p className="text-gray-700">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam laoreet tempus augue, ac venenatis lectus tempus ut. Sed sodales erat a libero.</p>
-                  <div className="flex flex-col items-center mt-4">
-                    <div className="text-center">
-                      <h3 className="font-semibold text-gray-900">Devid Sailio</h3>
-                      <p className="text-gray-600">Founder @ TailGrids</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </Carousel>
+    // eslint-disable-next-line react/style-prop-object
+    <section className="bg-color text-white relative">
+      {/* Happy Clients Section */}
+      <div className="py-32 text-center relative z-20">
+        <div className="container mx-auto px-4">
+          <h2 className="text-3xl font-bold">Some of My Happy Clients</h2>
+          <p className="text-gray-300 mt-4">There are many variations of passages of Lorem Ipsum available but the majority have suffered alteration in some form.</p>
+          <div className="flex flex-wrap justify-center mt-8 mb-12">
+            <img className="h-12 mx-4 my-2" src="images/games.jpg" alt="Client 1" />
+            <img className="h-12 mx-4 my-2" src="images/games.jpg" alt="Client 2" />
+            <img className="h-12 mx-4 my-2" src="images/games.jpg" alt="Client 3" />
+            <img className="h-12 mx-4 my-2" src="images/games.jpg" alt="Client 4" />
+            <img className="h-12 mx-4 my-2" src="images/games.jpg" alt="Client 5" />
+            <img className="h-12 mx-4 my-2" src="images/games.jpg" alt="Client 6" />
+          </div>
         </div>
       </div>
+
+      {/* Work Together Section */}
+      <section className="bg-colorSecondary text-white absolute bottom-0 left-0 right-0 mx-auto z-10 py-16 transform translate-y-1/2 max-w-6xl">
+        <div className="container mx-auto text-center px-4 ">
+          <h2 className="text-3xl font-bold">Want to work together and create amazing products with me?</h2>
+          <form className="mt-8 flex flex-col sm:flex-row items-center justify-center" onSubmit={handleSubmit}>
+            <input
+              type="email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              placeholder="Enter your email"
+              className="w-full max-w-md p-3 rounded-md text-gray-900 mb-4 sm:mb-0 sm:mr-4"
+              required
+            />
+            <button
+              type="submit"
+              className="bg-white text-blue-600 font-bold py-3 px-6 rounded-md"
+            >
+              Get a Quote
+            </button>
+          </form>
+          {message && <p className="mt-4">{message}</p>}
+        </div>
+      </section>
     </section>
   );
 }

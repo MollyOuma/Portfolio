@@ -3,29 +3,42 @@ import React, { useState } from 'react';
 const Portfolio = () => {
   const projects = [
     {
-      title: "SaaS landing page",
+      title: "Data Compression",
       category: "All",
       image: "portfolio1.png",
-      Description: "hjadkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmkkkkkkkkkkkkk.mmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmmm"
+      Description: "I implemented Huffman and Arithmetic coding algorithms in C/C++ to optimize media file compression, improving storage and data transfer speeds"
     },
     {
-      title: "SaaS landing page",
+      title: "CheckMech - Roadside Assistance Platform",
       category: "Web Design",
       image: "portfolio2.png",
-      Description: "hjadkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+      Description: " web application that connects drivers with mechanics, reducing response times by 40% and improving customer satisfaction."
     },
     {
-      title: "Job portal landing page",
+      title: "Employee Management System",
       category: "Graphic Design",
       image: "portfolio3.png",
-      Description: "hjadkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+      Description: "Designed and implemented a system that automates task assignments and performance tracking, resulting in a 15% productivity boost."
     },
     {
-      title: "Startup landing page",
+      title: "Flight Management System",
       category: "UI/UX",
       image: "portfolio4.png",
-      Description: "hjadkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
+      Description: "Developed using Django, this system features real-time flight tracking and management, enhancing operational efficiency."
+    },
+    {
+      title: "Video Game Design and Development",
+      category: "All",
+      image: "games.jpg",
+      Description: "Created engaging games like tic-tac-toe, showcasing creativity and proficiency in game development."
+    },
+    {
+      title: "AI Search Algorithms Implementation",
+      category: "All",
+      image: "algorithms.jpg",
+      Description: "Enhanced user experience with AI search algorithms, leading to a 25% increase in search accuracy and engagement."
     }
+
   ];
 
   const [selectedCategory, setSelectedCategory] = useState("All");
@@ -39,7 +52,9 @@ const Portfolio = () => {
   return (
     <section id="portfolio" className="py-20 bg-white">
       <div className="container mx-auto px-20">
-        <h2 className="text-4xl font-bold text-blue-500 text-center">Portfolio</h2>
+        <h2 className="text-sm font-bold text-blue-500 uppercase mb-2 text-center">Portfolio</h2>
+        <h3 className='text-4xl font-bold text-gray-900 mt-2 text-center'>Recent Works</h3>
+        <p className = "mt-4 text-lg text-gray-500 text-center md:px-32">Here are some of the projects I've worked on, showcasing my skills in both backend and frontend development. Each project reflects my commitment to quality and innovation.</p>
         <div className="flex justify-center mt-8">
           <button onClick={() => handleCategoryClick("All")} className={`mx-2 px-6 py-2 rounded-full ${selectedCategory === "All" ? "bg-blue-500 text-white" : "bg-white text-gray-400"}`}>All</button>
           <button onClick={() => handleCategoryClick("Web Design")} className={`mx-2 px-4 py-2 rounded-full ${selectedCategory === "Web Design" ? "bg-blue-500 text-white" : "bg-white text-gray-400"}`}>Web Design</button>
