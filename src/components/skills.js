@@ -22,10 +22,10 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white">
+    <section id="skills" className="py-20 bg-white overflow-hidden">
       <div className="container mx-auto">
-        <h2 className="text-4xl font-bold text-center text-gray-900 mb-8">My Skills</h2>
-        <div className="flex flex-wrap justify-around gap-4 mx-20">
+        <h2 className="text-2xl md:text-4xl font-bold text-center text-gray-900 mb-8">My Skills</h2>
+        <div className="flex flex-wrap justify-around gap-4 md:mx-20 px-8">
           {skills.map((skill, index) => (
             <div key={index} className="w-full md:w-5/12">
               <div className="flex justify-between items-center mb-2">

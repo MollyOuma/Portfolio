@@ -49,37 +49,37 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="py-20 bg-white text-gray-900">
+    <section id="services" className="py-20 bg-white text-gray-900 overflow-hidden">
       <div className="container mx-auto">
         {/* What You Get */}
-        <div className="text-center mb-12 px-20">
+        <div className="text-center mb-12 md:px-20 px-4">
           <h2 className="text-sm font-bold text-blue-500 uppercase mb-2">What You Get</h2>
-          <h2 className="text-4xl font-bold mb-4 text-gray-900">My Services</h2>
-          <p className="text-lg mb-8 text-gray-500 md:px-32">
+          <h2 className="text-2xl md:text-4xl font-bold mb-4 text-gray-900">My Services</h2>
+          <p className="text-sm md:text-lg mb-8 text-gray-500 md:px-32">
             Greetings, fellow digital explorers! I am Sylvester, a passionate and innovative Full-Stack developer dedicated to crafting immersive digital experiences. Welcome to my online abode.
           </p>
           <button onClick={scrollToContact} className="bg-blue-500 text-white py-2 px-8 rounded-full font-bold transition duration-300">Hire Me</button>
         </div>
 
         {/* Services Cards */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center px-20">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-4 text-center md:px-20 px-8">
           {services.map((service, index) => (
             <div key={index} className="bg-gray-200 rounded shadow-lg p-4 text-gray mt-3">
               <div className="mb-4">
                 <img src={service.icon} alt={`${service.title} icon`} className="mx-auto"/>
               </div>
-              <h3 className="text-xl font-semibold mb-2">{service.title}</h3>
-              <p className='text-gray-600'>{service.description}</p>
+              <h3 className="text-lg md:text-xl font-semibold mb-2">{service.title}</h3>
+              <p className='text-gray-600 text-sm'>{service.description}</p>
             </div>
           ))}
         </div>
 
        {/* Statistics Section */}
-       <div className="flex flex-wrap justify-around bg-gradient-to-r from-gray-200 to-blue-500 py-8 mt-12 ">
+       <div className="px-24 flex flex-wrap justify-around bg-gradient-to-r from-gray-200 via-gray-200 to-color py-8 mt-12 ">
           {stats.map((stat, index) => (
             <div key={index} className="m-4 text-center">
-              <h3 className="text-4xl font-bold text-blue-500">{stat.value}</h3>
-              <p className="text-lg">{stat.label}</p>
+              <h3 className="text-xl md:text-4xl font-bold text-blue-500">{stat.value}</h3>
+              <p className="text-sm md:text-lg">{stat.label}</p>
             </div>
           ))}
         </div>
