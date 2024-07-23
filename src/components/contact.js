@@ -9,7 +9,7 @@ const Contact = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-
+  
     const formData = {
       name,
       company,
@@ -17,16 +17,16 @@ const Contact = () => {
       phone,
       message
     };
-
+  
     try {
-      const response = await fetch('https://sylvesterportfolio.vercel.app/sendEmail', {
+      const response = await fetch('/api/sendEmail', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
         },
         body: JSON.stringify(formData),
       });
-
+  
       if (response.ok) {
         alert('Message sent successfully!');
         setName('');
@@ -43,7 +43,6 @@ const Contact = () => {
       alert('Failed to send message. Please try again later.');
     }
   };
-
   return (
     <section id="contact" className="py-32 bg-white overflow-hidden">
       <div className="container mx-auto mt-12">

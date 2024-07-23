@@ -6,15 +6,15 @@ const Testimonials = () => {
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-
-    const response = await fetch('https://sylvesterportfolio.vercel.app/send-email', {
+  
+    const response = await fetch('/api/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({ email }),
     });
-
+  
     if (response.ok) {
       setMessage('Email sent successfully!');
       setEmail(''); // Clear the input field
