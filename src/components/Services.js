@@ -5,32 +5,32 @@ const Services = () => {
     {
       title: 'Full-Stack Development',
       description: 'Providing comprehensive development services from backend to frontend for seamless integration and performance',
-      icon: 'frontend.png'  // Replace with actual path or icon component
+      icon: 'fullstack.png'  // Replace with actual path or icon component
     },
     {
       title: 'Microservice Development',
       description: 'Specialized development of microservices using C and C++ for optimized performance and scalability. I use C & C++ for this.',
-      icon: 'backend.png' // Replace with actual path or icon component
+      icon: 'microservice.png' // Replace with actual path or icon component
     },
     {
       title: 'Game Development',
       description: 'Design and development of engaging and interactive games for various platforms and audiences.',
-      icon: 'ux.png' // Replace with actual path or icon component
+      icon: 'gaming.png' // Replace with actual path or icon component
     },
     {
       title: 'Software Modeling, Design & Architecture',
       description: 'Creating robust software models, designing architectures, and implementing scalable solutions.',
-      icon: 'game.png' // Replace with actual path or icon component
+      icon: 'modeling.png' // Replace with actual path or icon component
     },
     {
       title: 'Database Design & Development',
       description: 'Expertise in designing and developing efficient database solutions tailored to specific needs.',
-      icon: 'database.png' // Replace with actual path or icon component
+      icon: 'base.png' // Replace with actual path or icon component
     },
     {
       title: 'UI/UX Design',
       description: 'Crafting intuitive user interfaces and engaging user experiences to enhance digital products.',
-      icon: 'uiux.png' // Replace with actual path or icon component
+      icon: 'ui.png' // Replace with actual path or icon component
     },
   ];
 

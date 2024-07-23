@@ -50,7 +50,7 @@ const Portfolio = () => {
   const filteredProjects = selectedCategory === "All" ? projects : projects.filter(project => project.category === selectedCategory);
 
   return (
-    <section id="portfolio" className="py-20 bg-white overflow-hidden">
+    <section id="portfolio" className="md:py-20 bg-white overflow-hidden">
       <div className="container mx-auto md:px-20 px-4">
         <h2 className="text-sm font-bold text-blue-500 uppercase mb-2 text-center">Portfolio</h2>
         <h3 className='text-2xl md:text-4xl font-bold text-gray-900 mt-2 text-center'>Recent Works</h3>

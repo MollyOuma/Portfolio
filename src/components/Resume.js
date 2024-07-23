@@ -8,7 +8,7 @@ const Resume = () => {
       institution: "Fremont Associates",
       location: "Nairobi, Kenya",
       period: "Present",
-      description: "Specialized in user-centered design and front-end development.Contributed to a scorecard management system that improved company performance"
+      description: "Specialized in Full-stack development, and  user-centered design. I am Contributing to a scorecard management system that should improve company performance by ensuring all tasks are completed."
     }
   ];
 
@@ -18,14 +18,14 @@ const Resume = () => {
       company: "Webacha Company Limited",
       location: "Webuye, Kenya",
       period: "2023 - 2024",
-      description: "Developed and maintained the front-end of various web applications, focusing on user experience and performance."
+      description: "Developed and maintained an E-commerce System. I designed and implemented both backend and frontend of the application, focusing on user experience and performance."
     },
     {
       title: "Software Developer Attache",
       company: "Coretec Solutions Africa",
       location: "Nairobi, Kenya",
       period: "2022 - 2023",
-      description: "Created intuitive and visually appealing user interfaces for web and mobile applications."
+      description: "I collaborated with a team in customizing products using Microsoft Dynamics.I also  developed a service that automatically corrects errors on the code with 80% precision"
     },
     {
       title: "Bachelor of Science in Computer Science",
@@ -37,7 +37,7 @@ const Resume = () => {
   ];
 
   return (
-    <section id="resume" className="py-20 bg-white flex justify-around overflow-hidden">
+    <section id="resume" className="py-8 md:py-20 bg-white flex justify-around overflow-hidden">
       <div className="container mx-auto md:mx-20 relative">
         <h2 className="text-sm font-bold text-blue-500 uppercase mb-2 text-center">Education & Experience</h2>
         <h2 className="text-xl md:text-5xl font-bold text-gray-900 text-center">My Resume</h2>

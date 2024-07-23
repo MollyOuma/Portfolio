@@ -22,7 +22,7 @@ const Skills = () => {
   ];
 
   return (
-    <section id="skills" className="py-20 bg-white overflow-hidden">
+    <section id="skills" className="py-8 md:py-20 bg-white overflow-hidden">
       <div className="container mx-auto">
         <h2 className="text-2xl md:text-4xl font-bold text-center text-gray-900 mb-8">My Skills</h2>
         <div className="flex flex-wrap justify-around gap-4 md:mx-20 px-8">

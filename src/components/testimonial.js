@@ -33,10 +33,6 @@ const Testimonials = () => {
           <p className="text-gray-300 mt-4 px-4 md:px-32">I am proud to have worked with a diverse group of clients who trust me to deliver exceptional solutions.<br/> Here are some of the brands that have experienced I commitment <br/> to excellence and innovation.</p>
           <div className="flex flex-wrap justify-center mt-8 mb-16">
             <img className="h-14 w-20 mx-4 my-2" src="images/logo.jpg" alt="Client 1" />
-            <img className="h-14 w-20 mx-4 my-2" src="images/logo.jpg" alt="Client 2" />
-            <img className="h-14 w-20 mx-4 my-2" src="images/logo.jpg" alt="Client 3" />
-            <img className="h-14 w-20 mx-4 my-2" src="images/download.jfif" alt="Client 4" />
-            <img className="h-14 w-20 mx-4 my-2" src="images/download.jfif" alt="Client 5" />
             <img className="h-14 w-20 mx-4 my-2" src="images/download.jfif" alt="Client 6" />
           </div>
         </div>
