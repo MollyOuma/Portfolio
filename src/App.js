@@ -22,9 +22,9 @@ function App() {
       <About />
       <Services />
       <Portfolio />
+      <Testimonials />
       <Resume />
       <Skills />
-      <Testimonials />
       <Contact />
       <Footer />
     </div>

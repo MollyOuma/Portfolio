@@ -7,7 +7,7 @@ const Testimonials = () => {
   const handleSubmit = async (event) => {
     event.preventDefault();
 
-    const response = await fetch('http://localhost:3001/send-email', {
+    const response = await fetch('https://sylvesterportfolio.vercel.app/send-email', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
