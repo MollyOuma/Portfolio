@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
+import { FaFacebookF, FaGithub, FaTwitter, FaLinkedinIn } from 'react-icons/fa';
 
 const currentYear = new Date().getFullYear();
 
@@ -40,10 +40,10 @@ function Footer() {
       <div className="container mx-auto text-center mt-10 px-6">
         <hr className="border-gray-700 mb-12" />
         <div className="flex justify-center space-x-8 mb-8">
-          <a href="#" className="text-white hover:text-blue-500"><FaFacebookF /></a>
-          <a href="#" className="text-white hover:text-blue-500"><FaInstagram /></a>
-          <a href="#" className="text-white hover:text-blue-500"><FaTwitter /></a>
-          <a href="#" className="text-white hover:text-blue-500"><FaLinkedinIn /></a>
+          <a href="https://www.facebook.com/sylvester.ouma.ouma" className="text-white hover:text-blue-500"><FaFacebookF /></a>
+          <a href="https://github.com/OumaSylvester" className="text-white hover:text-blue-500"><FaGithub /></a>
+          <a href="https://x.com/SylvesterOumaO2" className="text-white hover:text-blue-500"><FaTwitter /></a>
+          <a href="https://www.linkedin.com/in/sylvester-ouma-ouma-0882ba231/" className="text-white hover:text-blue-500"><FaLinkedinIn /></a>
         </div>
         <p className="text-sm">&copy; Sylvester Ouma {currentYear}. All rights reserved.</p>
       </div>

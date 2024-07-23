@@ -8,7 +8,6 @@ import Resume from './components/Resume';
 import Testimonials from './components/testimonial';
 import Contact from './components/contact';
 import Services from './components/Services';
-import styled from 'styled-components';
 import Footer from './components/Footer';
 
 
