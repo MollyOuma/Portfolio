@@ -26,6 +26,7 @@ transporter.verify(function(error, success) {
 
 // Quote email
 app.post('/api/send-email', (req, res) => {
+  console.log('Received request:', req.body);
   const { email } = req.body;
 
   const mailOptions = {
@@ -46,6 +47,8 @@ app.post('/api/send-email', (req, res) => {
 
 // Contact form email
 app.post('/api/sendEmail', (req, res) => {
+
+  
   const { name, company, email, phone, message } = req.body;
 
   const mailOptions = {
@@ -66,7 +69,7 @@ app.post('/api/sendEmail', (req, res) => {
   });
 });
 
-const PORT = process.env.PORT || 3001;
+const PORT = process.env.PORT || 5000;
 app.listen(PORT, () => {
   console.log(`Server running on port ${PORT}`);
 });

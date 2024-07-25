@@ -3,7 +3,7 @@ import { FaFacebookF, FaTwitter, FaWhatsapp, FaLinkedinIn, FaGithub } from 'reac
 
 const About = () => {
   return (
-    <section id="about" className="py-8 md:py-32 bg-white overflow-hidden">
+    <section id="about" className="py-8 md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto md:px-20 px-4 flex flex-col md:flex-row items-center justify-around">
         <div className="md:w-1/2 mb-8 md:mb-0 ">
           <h2 className="text-sm font-bold text-blue-500 uppercase">About Me</h2>
