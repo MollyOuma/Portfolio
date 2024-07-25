@@ -13,7 +13,7 @@ const Navbar = () => {
       <div className="container mx-auto px-4 flex justify-between items-center py-6 md:px-16">
         <div className="flex items-center">
           <img src="../logo2.png" alt="Logo" className="h-8 w-8 mr-2" />
-          <div className="text-2xl font-bol text-blue-500">
+          <div className="text-2xl font-bold text-blue-500">
             Sylvester
           </div>
         </div>
