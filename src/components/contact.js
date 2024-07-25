@@ -17,9 +17,12 @@ const Contact = () => {
       phone,
       message
     };
+
+    // Determine the API URL based on the environment
+    const API_URL = process.env.NODE_ENV === 'production' ? 'https://sylvesterportfolio.vercel.app/api' : 'http://localhost:3001/api/sendEmail';
   
     try {
-      const response = await fetch('/api/sendEmail', {
+      const response = await fetch(`${API_URL}/send-email`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -43,6 +46,7 @@ const Contact = () => {
       alert('Failed to send message. Please try again later.');
     }
   };
+
   return (
     <section id="contact" className="md:py-24 bg-white overflow-hidden">
       <div className="container mx-auto mt-12">
