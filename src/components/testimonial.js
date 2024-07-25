@@ -3,11 +3,14 @@ import React, { useState } from 'react';
 const Testimonials = () => {
   const [email, setEmail] = useState('');
   const [message, setMessage] = useState('');
+  
 
   const handleSubmit = async (event) => {
     event.preventDefault();
-  
-    const response = await fetch('/api/send-email', {
+
+    const API_URL = process.env.NODE_ENV === 'production' ? 'https://sylvesterportfolio.vercel.app/api' : 'http://localhost:3001/api/sendEmail';
+
+    const response = await fetch(`${API_URL}/send-email`, {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',

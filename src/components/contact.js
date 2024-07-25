@@ -22,7 +22,7 @@ const Contact = () => {
     const API_URL = process.env.NODE_ENV === 'production' ? 'https://sylvesterportfolio.vercel.app/api' : 'http://localhost:3001/api/sendEmail';
   
     try {
-      const response = await fetch(`${API_URL}/send-email`, {
+      const response = await fetch(`${API_URL}/sendEmail`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
