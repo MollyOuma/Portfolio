@@ -6,37 +6,58 @@ const Portfolio = () => {
       title: "Data Compression",
       category: "All",
       image: "portfolio1.png",
-      Description: "I implemented Huffman and Arithmetic coding algorithms in C/C++ to optimize media file compression, improving storage and data transfer speeds"
+      Description: "I implemented Huffman and Arithmetic coding algorithms in C/C++ to optimize media file compression, improving storage and data transfer speeds",
+      link:'https://github.com/OumaSylvester/arithmeticCoding'
     },
+
     {
       title: "CheckMech - Roadside Assistance Platform",
       category: "Web Design",
       image: "portfolio2.png",
-      Description: " web application that connects drivers with mechanics, reducing response times by 40% and improving customer satisfaction."
+      Description: " web application that connects drivers with mechanics, reducing response times by 40% and improving customer satisfaction.",
+      link:'https://github.com/sylvesterouma'
+
     },
     {
       title: "Employee Management System",
       category: "Graphic Design",
       image: "portfolio3.png",
-      Description: "Designed and implemented a system that automates task assignments and performance tracking, resulting in a 15% productivity boost."
+      Description: "Designed and implemented a system that automates task assignments and performance tracking, resulting in a 15% productivity boost.",
+      link:'https://github.com/OumaSylvester/FinTech'
+
     },
     {
       title: "Flight Management System",
       category: "UI/UX",
       image: "portfolio4.png",
-      Description: "Developed using Django, this system features real-time flight tracking and management, enhancing operational efficiency."
+      Description: "Developed using Django, this system features real-time flight tracking and management, enhancing operational efficiency.",
+      link:'https://github.com/OumaSylvester/kenyaAirways'
+
     },
     {
       title: "Video Game Design and Development",
       category: "All",
       image: "games.jpg",
-      Description: "Created engaging games like tic-tac-toe, showcasing creativity and proficiency in game development."
+      Description: "Created engaging games like tic-tac-toe, showcasing creativity and proficiency in game development.",
+      link:'https://github.com/OumaSylvester/squirrel-eat-squirrel'
+
     },
+    // {
+    //   title: "AI Search Algorithms Implementation",
+    //   category: "All",
+    //   image: "algorithms.jpg",
+    //   Description: "Enhanced user experience with AI search algorithms, leading to a 25% increase in search accuracy and engagement.",
+    //   link:'https://github.com/sylvesterouma'
+
+    // },
     {
-      title: "AI Search Algorithms Implementation",
+      title: "E-commerce System & Webacha website",
       category: "All",
       image: "algorithms.jpg",
-      Description: "Enhanced user experience with AI search algorithms, leading to a 25% increase in search accuracy and engagement."
+      Description: "I developed an e-commerce system for webacha and Their website too which is user-friendly and intuitive. webacha.com",
+      link:'https://github.com/OumaSylvester/Webacha'
+      
+
     }
 
   ];
@@ -70,9 +91,16 @@ const Portfolio = () => {
                 <img src={`../images/${project.image}`} alt={project.title} className="w-full h-auto" />
               </div>
               <div className="text-left">
-                <h4 className="text-lg md:text-xl font-bold text-gray-900">{project.title}</h4>
-                <p className="text-sm md:text-lg text-gray-600 mt-4 break-words">{project.Description}</p>
-              </div>
+  <h4 className="text-lg md:text-xl font-bold text-gray-900">{project.title}</h4>
+  <p className="text-sm md:text-lg text-gray-600 mt-4 break-words">{project.Description}</p>
+  <button
+  className="bg-blue-500 text-white text-sm md:text-lg font-semibold py-2 px-4 mt-4 rounded shadow-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50"
+  onClick={() => window.open(project.link, '_blank')}
+>
+  Check this Project
+</button>
+
+</div>
             </div>
           ))}
         </div>

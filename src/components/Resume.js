@@ -37,7 +37,7 @@ const Resume = () => {
   ];
 
   return (
-    <section id="resume" className=" mt-12 md:mt-0 py-8 md:py-36 bg-white flex justify-around overflow-hidden">
+    <section id="resume" className=" mt-12 md:mt-0 py-24 md:py-36 bg-white flex justify-around overflow-hidden">
       <div className="container mx-auto md:mx-20 relative">
         <h2 className="text-sm font-bold text-blue-500 uppercase mb-2 text-center">Education & Experience</h2>
         <h2 className="text-xl md:text-5xl font-bold text-gray-900 text-center">My Resume</h2>
